@@ -1,0 +1,20 @@
+databases:
+  - name: savourbite-db
+    databaseName: savourbite
+    user: savourbite_user
+
+services:
+  - type: web
+    name: savourbite
+    env: python
+    buildCommand: "bash build.sh"
+    startCommand: "gunicorn savourbite.wsgi:application"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: savourbite-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
