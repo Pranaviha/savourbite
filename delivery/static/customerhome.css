@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Aesthetic background: Butter Chicken and Roti spread */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%), 
+                url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=2036&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* User Welcome Greeting */
+h3 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Table Container */
+table {
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.98);
+    border-collapse: collapse;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+/* Table Header */
+thead {
+    background: #d35400; /* Deep culinary orange */
+    color: #ffffff;
+}
+
+th {
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+/* Table Body Cells */
+td {
+    padding: 20px;
+    color: #2c3e50;
+    border-bottom: 1px solid #edf2f7;
+    vertical-align: middle;
+}
+
+/* Restaurant Image Styling */
+td img {
+    width: 140px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+td img:hover {
+    transform: scale(1.08);
+}
+
+/* Name and Cuisine emphasis */
+td:first-child {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Rating Styling */
+td:nth-child(4) {
+    font-weight: 600;
+    color: #f39c12; /* Star Gold */
+}
+
+/* "View Menu" Button Styling */
+td a {
+    text-decoration: none;
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+   display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(211, 84, 0, 0.3);
+}
+
+td a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(211, 84, 0, 0.4);
+    filter: brightness(1.1);
+}
+
+/* Alternating Row Color */
+tbody tr:nth-child(even) {
+    background-color: #fdfaf8;
+}

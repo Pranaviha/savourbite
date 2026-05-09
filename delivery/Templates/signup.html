@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+     {% load static %}
+    <link href="{% static 'signup.css'%}" rel="stylesheet">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="form-container">
+            <h3>Sign Up here</h3>
+            <div class="title-underline"></div>
+            
+            <form action="{% url 'signup' %}" method="POST">
+                {% csrf_token %}
+                
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Username</label>
+                        <input type="text" name="username" placeholder="Enter your username" required/>
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Enter your email" required/>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" name="password" placeholder="Enter your password" required/>
+                    </div>
+                    <div class="input-group">
+                        <label>Mobile</label>
+                        <input type="text" name="mobile" placeholder="Enter your number" required/>
+                    </div>
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Address</label>
+                    <textarea name="address" placeholder="Enter your delivery address" required></textarea>
+                </div>
+
+                <button type="submit" class="register-btn">SIGN UP</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

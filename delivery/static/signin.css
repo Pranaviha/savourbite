@@ -1,0 +1,187 @@
+/* Import a modern, friendly font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f6f8fa;
+    padding: 20px;
+}
+
+/* The overall container, splitting the screen in two */
+.signin-container {
+    display: flex;
+    background: #fff;
+    width: 900px;
+    max-width: 100%;
+    height: 550px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    overflow: hidden; /* Important for rounded edges */
+}
+
+/* 1. Left Side: Image Section */
+.image-section {
+    flex: 1.2; /* Takes up slightly more space */
+    /* Using a stunning, high-res image from Unsplash of a gourmet burger */
+    background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* A dark overlay makes the text pop and looks premium */
+.image-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    color: white;
+}
+
+.image-overlay h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.image-overlay p {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* 2. Right Side: Form Section */
+.form-section {
+    flex: 1; /* Takes up slightly less space */
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-section h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+}
+
+/* Grouping inputs and labels for clean spacing */
+.input-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #eaeaea;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input::placeholder {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
+
+input:focus {
+    border-color: #f39c12; /* Warm Yellow/Orange focus */
+    box-shadow: 0 0 10px rgba(243, 156, 18, 0.1);
+    background-color: #fff;
+}
+
+/* The appetizing orange button */
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); /* Orange Gradient */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.register-prompt {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.register-prompt a {
+    color: #e67e22; /* Matches the button */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.register-prompt a:hover {
+    color: #d35400;
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .signin-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image-section {
+        height: 150px; /* Shorten image on mobile */
+    }
+
+    .image-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .form-section {
+        padding: 30px;
+    }
+}

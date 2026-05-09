@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Elegant food background with a subtle overlay */
+    background: linear-gradient(135deg, rgba(254, 237, 169, 0.75) 0%, rgba(0, 0, 0, 0.4) 100%), 
+            url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #2b05ff; /* Deep slate blue for authority */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    width: 320px;
+    padding: 18px 20px;
+    margin: 10px 0;
+    background: #ffffff;
+    color: #86560e; /* Professional admin blue */
+    border: 2px solid #fac262;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:hover {
+    background: #fbcd83;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+}
+
+/* Hiding the <br> tags to rely on CSS margins */
+br {
+    display: none;
+}

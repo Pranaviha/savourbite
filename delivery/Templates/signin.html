@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN IN</title>
+     {% load static %}
+    <link href="{% static 'signin.css'%}" rel="stylesheet">
+</head>
+<body>
+    <div class="signin-container">
+        
+        <!-- Part 1: The Image Panel (Background image handled by CSS) -->
+        <div class="image-section">
+            <div class="image-overlay">
+                <h1>Savour<br>Bite</h1>
+                <p>Your cravings, delivered.</p>
+            </div>
+        </div>
+
+        <!-- Part 2: The Form Panel (Your original form) -->
+        <div class="form-section">
+            <h3>SIGN IN</h3>
+            <p class="subtitle">Welcome back! Let's get your food.</p>
+
+            <form action="{% url 'signin' %}" method="POST">
+                {% csrf_token %}
+                
+                <!-- Wrapped labels/inputs in groups for better CSS spacing -->
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" name="username" placeholder="Enter your username"/>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Enter your password"/>
+                </div>
+
+                <button type="submit">SIGN IN</button>
+            </form>
+    </div>
+</body>
+</html>

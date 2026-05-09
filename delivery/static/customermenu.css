@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+   background: linear-gradient(135deg, rgba(253, 242, 233, 0.95) 0%, rgba(220, 100, 40, 0.85) 100%), 
+            url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Welcome Text */
+h3 {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* "Go to Cart" Link Button */
+a[href*="show_cart"] {
+    text-decoration: none;
+    background: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+a[href*="show_cart"]:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* Table Design */
+table {
+    width: 100%;
+    max-width: 1200px;
+    background: #ffffff;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden; /* Ensures corners stay rounded */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border: none;
+}
+
+thead {
+    background: linear-gradient(135deg, #f39c12 0%, #d35400 100%);
+    color: #ffffff;
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Row Hover Effect */
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #fff9f5;
+}
+
+/* Image Column */
+td img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* Price & Veg Styling */
+td:nth-child(4) {
+    font-weight: 700;
+    color: #d35400;
+}
+
+/* Add to Cart Button Styling */
+td a[href*="add_to_cart"] {
+    text-decoration: none;
+    background: #16a34a; /* Green for "Add" */
+    color: white;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+td a[href*="add_to_cart"]:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(22, 163, 74, 0.3);
+}
+
